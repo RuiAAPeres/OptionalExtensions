@@ -93,6 +93,6 @@ github "RuiAAPeres/OptionalExtensions"
 License
 -------
 
-    OptionalExtensions is licensed under the MIT License, Version 2.0. [View the license file](LICENSE)
+OptionalExtensions is licensed under the MIT License, Version 2.0. [View the license file](LICENSE)
 
-    Copyright (c) 2015 Rui Peres
+Copyright (c) 2015 Rui Peres
