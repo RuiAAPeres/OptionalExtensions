@@ -52,7 +52,7 @@ extension Optional {
         }
     }
     
-    func isSome() -> Bool {
+    var isSome: Bool {
         
         switch self {
         case .Some(_): return true
@@ -60,8 +60,8 @@ extension Optional {
         }
     }
     
-    func isNone() -> Bool {
+    var isNone: Bool {
         
-        return !isSome()
+        return !isSome
     }
 }

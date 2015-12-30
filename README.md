@@ -65,20 +65,20 @@ let sameNilledNumber = nilledNumber.onNone { print("Hello World") } // prints "H
 
 ```swift
 let number: Int? = 3
-let isSome = number.isSome() // true
+let isSome = number.isSome // true
 
 let nilledNumber: Int? = nil
-let isSome = nilledNumber.isSome() // false
+let isSome = nilledNumber.isSome // false
 ```
 
 ####`isNone`
 
 ```swift
 let number: Int? = 3
-let isSome = number.isNone() // false
+let isSome = number.isNone // false
 
 let nilledNumber: Int? = nil
-let isSome = nilledNumber.isNone() // true
+let isSome = nilledNumber.isNone // true
 ```
 
 Setup

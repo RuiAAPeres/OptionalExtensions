@@ -75,17 +75,17 @@ class OptionalExtensionsTests: XCTestCase {
     
     func testIsSome() {
         let number: Int? = 3
-        XCTAssertTrue(number.isSome())
+        XCTAssertTrue(number.isSome)
         
         let nilledNumber: Int? = nil
-        XCTAssertFalse(nilledNumber.isSome())
+        XCTAssertFalse(nilledNumber.isSome)
     }
     
     func testIsNone() {
         let number: Int? = 3
-        XCTAssertFalse(number.isNone())
+        XCTAssertFalse(number.isNone)
         
         let nilledNumber: Int? = nil
-        XCTAssertTrue(nilledNumber.isNone())
+        XCTAssertTrue(nilledNumber.isNone)
     }
 }
