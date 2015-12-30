@@ -11,7 +11,7 @@ Why?
 
 Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
 
-####`filter`
+####`filter: (T -> Bool) -> Optional<T>`
 
 ```swift
 let number: Int? = 3
@@ -22,7 +22,7 @@ let biggerThan2 = number.filter { $0 > 2 } // .Some(3)
 let biggerThan3 = number.filter { $0 > 3 } // .None
 ```
 
-####`replaceNil`
+####`replaceNil: T -> Optional<T>`
 
 ```swift
 let number: Int? = 3
@@ -32,7 +32,7 @@ let nilledNumber: Int? = nil
 nilledNumber.replaceNil(with: 2) // .Some(2)
 ```
 
-####`apply` (similar to `[T]`'s `forEach`)
+####`apply: (T -> Void) -> Void` (similar to `[T]`'s `forEach`)
 
 ```swift
 let number: Int? = 3
@@ -42,7 +42,7 @@ let nilledNumber: Int? = nil
 nilledNumber.apply { print($0) } // print won't be called
 ```
 
-####`onSome` (injects a side effect in the `.Some` branch)
+####`onSome: (T -> Void) -> Optional<T>` (injects a side effect in the `.Some` branch)
 
 ```swift
 let number: Int? = 3
@@ -52,7 +52,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
 ```
 
-####`onNone` (injects a side effect in the `.None` branch)
+####`onNone: (T -> Void) -> Optional<T>` (injects a side effect in the `.None` branch)
 
 ```swift
 let number: Int? = 3
@@ -62,7 +62,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onNone { print("Hello World") } // prints "Hello World" & returns .None
 ```
 
-####`isSome`
+####`isSome: Bool`
 
 ```swift
 let number: Int? = 3
@@ -72,7 +72,7 @@ let nilledNumber: Int? = nil
 let isSome = nilledNumber.isSome // false
 ```
 
-####`isNone`
+####`isNone: Bool`
 
 ```swift
 let number: Int? = 3
