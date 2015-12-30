@@ -4,7 +4,6 @@
 [![Swift 2.1](https://img.shields.io/badge/Swift-2.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](https://opensource.org/licenses/MIT)
 
-#### Usage
 
 #####**filter**
 ```swift
@@ -26,15 +25,13 @@ let nilledNumber: Int? = nil
 nilledNumber.replace(2) // .Some(2)
 ```
 
-#### Setup
-
+## Setup
 
 Carthage:
 
 ```
 github "RuiAAPeres/OptionalExtensions"
 ```
-
 
 ## License
 OptionalExtensions is licensed under the MIT License, Version 2.0. [View the license file](LICENSE)
