@@ -6,8 +6,14 @@
 
 #### Usage
 
+* **filter**
 ```swift
+let number: Int? = 3
 
+let biggerThan2 = number.filter { $0 > 2 } // .Some(3)
+
+
+let biggerThan3 = number.filter { $0 > 3 } // .None
 
 ```
 
