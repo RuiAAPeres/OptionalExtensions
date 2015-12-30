@@ -6,7 +6,7 @@
 
 #### Usage
 
-* **filter**
+#####**filter**
 ```swift
 let number: Int? = 3
 
