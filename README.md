@@ -5,7 +5,8 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 
-### Why?
+Why?
+----
 
 Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
 
@@ -80,7 +81,8 @@ let nilledNumber: Int? = nil
 let isSome = nilledNumber.isNone() // true
 ```
 
-## Setup
+Setup
+-----
 
 Carthage:
 
@@ -88,7 +90,9 @@ Carthage:
 github "RuiAAPeres/OptionalExtensions"
 ```
 
-## License
+License
+-------
+
 OptionalExtensions is licensed under the MIT License, Version 2.0. [View the license file](LICENSE)
 
 Copyright (c) 2015 Rui Peres
