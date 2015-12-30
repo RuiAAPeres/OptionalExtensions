@@ -6,7 +6,7 @@
 
 
 ### Why?
-
+-----
 Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
 
 ####`filter`
@@ -81,7 +81,7 @@ let isSome = nilledNumber.isNone() // true
 ```
 
 ## Setup
-
+-----
 Carthage:
 
 ```
@@ -89,6 +89,7 @@ github "RuiAAPeres/OptionalExtensions"
 ```
 
 ## License
-OptionalExtensions is licensed under the MIT License, Version 2.0. [View the license file](LICENSE)
+-----
+    OptionalExtensions is licensed under the MIT License, Version 2.0. [View the license file](LICENSE)
 
-Copyright (c) 2015 Rui Peres
+    Copyright (c) 2015 Rui Peres
