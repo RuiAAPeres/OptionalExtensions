@@ -10,9 +10,13 @@ import Foundation
 
 extension Optional {
     
-    func filter(predicate: Wrapped -> Bool) -> Optional {
+    func filter(@noescape predicate: Wrapped -> Bool) -> Optional {
         
-        guard let result = self.map (predicate) where result == true else { return .None}
+        guard
+            let result = self.map (predicate)
+            where result == true
+            else { return .None}
+        
         return self
     }
     
