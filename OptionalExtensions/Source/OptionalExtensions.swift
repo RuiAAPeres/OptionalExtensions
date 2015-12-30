@@ -15,7 +15,7 @@ extension Optional {
         guard
             let result = self.map (predicate)
             where result == true
-            else { return .None}
+            else { return .None }
         
         return self
     }
