@@ -28,7 +28,7 @@ extension Optional {
         }
     }
     
-    func apply(f: Wrapped -> Void) {
+    func apply(@noescape f: Wrapped -> Void) {
         
         switch self {
         case .Some(let wrapped): f(wrapped)
