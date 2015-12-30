@@ -33,7 +33,7 @@ let number: Int? = 3
 number.apply { print($0) } // 3
 
 let nilledNumber: Int? = nil
-nilledNumber.replace { print($0) } // print won't be called
+nilledNumber.apply { print($0) } // print won't be called
 
 ```
 
