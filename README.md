@@ -60,6 +60,26 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onNone { print("Hello World") } // prints "Hello World" & returns .None
 ```
 
+####`isSome`
+
+```swift
+let number: Int? = 3
+let isSome = number.isSome() // true
+
+let nilledNumber: Int? = nil
+let isSome = nilledNumber.isSome() // false
+```
+
+####`isNone`
+
+```swift
+let number: Int? = 3
+let isSome = number.isNone() // false
+
+let nilledNumber: Int? = nil
+let isSome = nilledNumber.isNone() // true
+```
+
 ## Setup
 
 Carthage:
