@@ -45,7 +45,7 @@ nilledNumber.apply { print($0) } // print won't be called
 
 ```swift
 let number: Int? = 3
-let sameNumber = newnumber.onSome { print($0) } // prints "3" & returns .Optional(3)
+let sameNumber = number.onSome { print($0) } // prints "3" & returns .Optional(3)
 
 let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
@@ -55,7 +55,7 @@ let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
 
 ```swift
 let number: Int? = 3
-let sameNumber = newnumber.onNone { print("Hello World") } // .Optional(3)
+let sameNumber = number.onNone { print("Hello World") } // .Optional(3)
 
 let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onNone { print("Hello World") } // prints "Hello World" & returns .None
