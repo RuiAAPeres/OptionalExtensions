@@ -36,7 +36,7 @@ extension Optional {
         }
     }
     
-    func onSome(f: Wrapped -> Void) -> Optional {
+    func onSome(@noescape f: Wrapped -> Void) -> Optional {
         
         switch self {
         case .Some(let wrapped): f(wrapped); return .Some(wrapped)
@@ -44,7 +44,7 @@ extension Optional {
         }
     }
     
-    func onNone(f: Void -> Void) -> Optional {
+    func onNone(@noescape f: Void -> Void) -> Optional {
         
         switch self {
         case .Some(let wrapped): return .Some(wrapped)

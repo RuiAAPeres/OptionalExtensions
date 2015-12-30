@@ -26,15 +26,34 @@ let nilledNumber: Int? = nil
 nilledNumber.replace(2) // .Some(2)
 ```
 
-####**apply**
+####**apply** (similar to [T]'s `forEach`)
 
 ```swift
 let number: Int? = 3
-number.apply { print($0) } // 3
+number.apply { print($0) } // prints "3"
 
 let nilledNumber: Int? = nil
 nilledNumber.apply { print($0) } // print won't be called
+```
 
+####**onSome** (injects a side effect in the flow for .Some)
+
+```swift
+let number: Int? = 3
+let sameNumber = newnumber.onSome { print($0) } // prints "3" & returns .Optional(3)
+
+let nilledNumber: Int? = nil
+let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
+```
+
+####**onNone** (injects a side effect in the flow for .None)
+
+```swift
+let number: Int? = 3
+let sameNumber = newnumber.onNone { print("Hello World") } // .Optional(3)
+
+let nilledNumber: Int? = nil
+let sameNilledNumber = nilledNumber.onNone { print("Hello World") } // prints "Hello World" & returns .None
 ```
 
 ## Setup
