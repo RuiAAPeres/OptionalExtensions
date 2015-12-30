@@ -40,7 +40,7 @@ let nilledNumber: Int? = nil
 nilledNumber.apply { print($0) } // print won't be called
 ```
 
-####`onSome` (injects a side effect in the flow for .Some)
+####`onSome` (injects a side effect in `.Some` branch)
 
 ```swift
 let number: Int? = 3
@@ -50,7 +50,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
 ```
 
-####`onNone` (injects a side effect in the flow for .None)
+####`onNone` (injects a side effect in the `.None` branch)
 
 ```swift
 let number: Int? = 3
