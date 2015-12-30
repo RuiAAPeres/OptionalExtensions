@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C7EC1DC81C34503A00BA1261 /* OptionalExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7EC1DC71C34503A00BA1261 /* OptionalExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7EC1DD21C3450A200BA1261 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EC1DD11C3450A200BA1261 /* OptionalExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C7EC1DC41C34503A00BA1261 /* OptionalExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionalExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7EC1DC71C34503A00BA1261 /* OptionalExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OptionalExtensions.h; sourceTree = "<group>"; };
-		C7EC1DC91C34503A00BA1261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7EC1DD11C3450A200BA1261 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		C7EC1DD41C345DD900BA1261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +46,8 @@
 		C7EC1DC61C34503A00BA1261 /* OptionalExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				C7EC1DD31C345DD900BA1261 /* Support */,
 				C7EC1DD01C34509A00BA1261 /* Source */,
-				C7EC1DC71C34503A00BA1261 /* OptionalExtensions.h */,
-				C7EC1DC91C34503A00BA1261 /* Info.plist */,
 			);
 			path = OptionalExtensions;
 			sourceTree = "<group>";
@@ -63,6 +60,14 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		C7EC1DD31C345DD900BA1261 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C7EC1DD41C345DD900BA1261 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,7 +75,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7EC1DC81C34503A00BA1261 /* OptionalExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +249,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = OptionalExtensions/Info.plist;
+				INFOPLIST_FILE = OptionalExtensions/Support/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rp.OptionalExtensions;
@@ -263,7 +267,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = OptionalExtensions/Info.plist;
+				INFOPLIST_FILE = OptionalExtensions/Support/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rp.OptionalExtensions;
