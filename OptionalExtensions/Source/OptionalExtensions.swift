@@ -10,6 +10,19 @@ import Foundation
 
 extension Optional {
     
+    func isSome() -> Bool {
+        
+        switch self {
+        case .Some(_): return true
+        case .None: return false
+        }
+    }
+    
+    func isNone() -> Bool {
+        
+        return !isSome()
+    }
+    
     func filter(@noescape predicate: Wrapped -> Bool) -> Optional {
         
         guard
