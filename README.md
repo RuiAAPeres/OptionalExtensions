@@ -40,7 +40,7 @@ let nilledNumber: Int? = nil
 nilledNumber.apply { print($0) } // print won't be called
 ```
 
-####`onSome` (injects a side effect in `.Some` branch)
+####`onSome` (injects a side effect in the `.Some` branch)
 
 ```swift
 let number: Int? = 3
