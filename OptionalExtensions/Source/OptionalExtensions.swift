@@ -20,7 +20,7 @@ extension Optional {
         return self
     }
     
-    func replace(replacement: Wrapped) -> Optional {
+    func replaceNil(with replacement: Wrapped) -> Optional {
         
         switch self {
         case .Some(_): return self

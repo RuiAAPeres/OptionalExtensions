@@ -20,14 +20,14 @@ let biggerThan2 = number.filter { $0 > 2 } // .Some(3)
 let biggerThan3 = number.filter { $0 > 3 } // .None
 ```
 
-####`replace`
+####`replaceNil`
 
 ```swift
 let number: Int? = 3
-number.replace(2) // .Some(3)
+number.replaceNil(with: 2) // .Some(3)
 
 let nilledNumber: Int? = nil
-nilledNumber.replace(2) // .Some(2)
+nilledNumber.replaceNil(with: 2) // .Some(2)
 ```
 
 ####`apply` (similar to `[T]`'s `forEach`)
