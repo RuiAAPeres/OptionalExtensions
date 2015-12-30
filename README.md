@@ -30,7 +30,7 @@ let nilledNumber: Int? = nil
 nilledNumber.replace(2) // .Some(2)
 ```
 
-####`apply` (similar to [T]'s `forEach`)
+####`apply` (similar to `[T]`'s `forEach`)
 
 ```swift
 let number: Int? = 3
