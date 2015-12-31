@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Optional {
+public extension Optional {
     
     func filter(@noescape predicate: Wrapped -> Bool) -> Optional {
         
@@ -20,7 +20,7 @@ extension Optional {
         return self
     }
     
-    func replaceNil(with replacement: Wrapped) -> Optional {
+    public func replaceNil(with replacement: Wrapped) -> Optional {
         
         switch self {
         case .Some(_): return self
@@ -28,7 +28,7 @@ extension Optional {
         }
     }
     
-    func apply(@noescape f: Wrapped -> Void) {
+    public func apply(@noescape f: Wrapped -> Void) {
         
         switch self {
         case .Some(let wrapped): f(wrapped)
@@ -36,7 +36,7 @@ extension Optional {
         }
     }
     
-    func onSome(@noescape f: Wrapped -> Void) -> Optional {
+    public func onSome(@noescape f: Wrapped -> Void) -> Optional {
         
         switch self {
         case .Some(let wrapped): f(wrapped); return .Some(wrapped)
@@ -44,7 +44,7 @@ extension Optional {
         }
     }
     
-    func onNone(@noescape f: Void -> Void) -> Optional {
+    public func onNone(@noescape f: Void -> Void) -> Optional {
         
         switch self {
         case .Some(let wrapped): return .Some(wrapped)
@@ -52,7 +52,7 @@ extension Optional {
         }
     }
     
-    var isSome: Bool {
+    public var isSome: Bool {
         
         switch self {
         case .Some(_): return true
@@ -60,7 +60,7 @@ extension Optional {
         }
     }
     
-    var isNone: Bool {
+    public var isNone: Bool {
         
         return !isSome
     }
