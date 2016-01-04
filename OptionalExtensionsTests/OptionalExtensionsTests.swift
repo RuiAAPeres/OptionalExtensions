@@ -7,9 +7,7 @@
 //
 
 import XCTest
-
-import XCTest
-@testable import OptionalExtensions
+import OptionalExtensions
 
 class OptionalExtensionsTests: XCTestCase {
     

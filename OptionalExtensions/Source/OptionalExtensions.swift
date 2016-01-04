@@ -20,7 +20,7 @@ public extension Optional {
         return self
     }
     
-    public func replaceNil(with replacement: Wrapped) -> Optional {
+    func replaceNil(with replacement: Wrapped) -> Optional {
         
         switch self {
         case .Some(_): return self
@@ -28,7 +28,7 @@ public extension Optional {
         }
     }
     
-    public func apply(@noescape f: Wrapped -> Void) {
+    func apply(@noescape f: Wrapped -> Void) {
         
         switch self {
         case .Some(let wrapped): f(wrapped)
@@ -36,7 +36,7 @@ public extension Optional {
         }
     }
     
-    public func onSome(@noescape f: Wrapped -> Void) -> Optional {
+    func onSome(@noescape f: Wrapped -> Void) -> Optional {
         
         switch self {
         case .Some(let wrapped): f(wrapped); return .Some(wrapped)
@@ -44,7 +44,7 @@ public extension Optional {
         }
     }
     
-    public func onNone(@noescape f: Void -> Void) -> Optional {
+    func onNone(@noescape f: Void -> Void) -> Optional {
         
         switch self {
         case .Some(let wrapped): return .Some(wrapped)
@@ -52,12 +52,12 @@ public extension Optional {
         }
     }
     
-    public var isSome: Bool {
+    var isSome: Bool {
         
         return self != nil
     }
     
-    public var isNone: Bool {
+    var isNone: Bool {
         
         return !isSome
     }
