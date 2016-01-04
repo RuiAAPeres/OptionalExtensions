@@ -54,10 +54,7 @@ public extension Optional {
     
     public var isSome: Bool {
         
-        switch self {
-        case .Some(_): return true
-        case .None: return false
-        }
+        return self != nil
     }
     
     public var isNone: Bool {
