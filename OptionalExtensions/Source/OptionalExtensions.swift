@@ -6,7 +6,6 @@
 //  Copyright © 2015 Rui Peres. All rights reserved.
 //
 
-import Foundation
 
 public extension Optional {
     
