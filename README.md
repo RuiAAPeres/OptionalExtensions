@@ -91,6 +91,11 @@ Carthage:
 github "RuiAAPeres/OptionalExtensions"
 ```
 
+Contributing
+-----------
+
+We will gladly accept Pull Requests with new methods or improving the ones that already exist. Documentation, or tests, are always welcome as well. ❤️
+
 License
 -------
 
