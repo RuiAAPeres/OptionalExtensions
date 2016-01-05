@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import OptionalExtensions_iOS
+import OptionalExtensions
 
 class OptionalExtensionsTests: XCTestCase {
     
