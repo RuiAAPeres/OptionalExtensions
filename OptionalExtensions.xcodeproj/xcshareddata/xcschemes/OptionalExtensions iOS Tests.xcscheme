@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-               BuildableName = "OptionalExtensions.framework"
-               BlueprintName = "OptionalExtensions"
+               BlueprintIdentifier = "E7120AAD1C348DE600867028"
+               BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+               BlueprintName = "OptionalExtensions iOS Tests"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,28 +26,20 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7120AAD1C348DE600867028"
-               BuildableName = "OptionalExtensionsTests.xctest"
-               BlueprintName = "OptionalExtensionsTests"
+               BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+               BlueprintName = "OptionalExtensions iOS Tests"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-            BuildableName = "OptionalExtensions.framework"
-            BlueprintName = "OptionalExtensions"
-            ReferencedContainer = "container:OptionalExtensions.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-            BuildableName = "OptionalExtensions.framework"
-            BlueprintName = "OptionalExtensions"
+            BlueprintIdentifier = "E7120AAD1C348DE600867028"
+            BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+            BlueprintName = "OptionalExtensions iOS Tests"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +74,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-            BuildableName = "OptionalExtensions.framework"
-            BlueprintName = "OptionalExtensions"
+            BlueprintIdentifier = "E7120AAD1C348DE600867028"
+            BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+            BlueprintName = "OptionalExtensions iOS Tests"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

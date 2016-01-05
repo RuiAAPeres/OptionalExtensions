@@ -4,14 +4,49 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>OptionalExtensions.xcscheme_^#shared#^_</key>
+		<key>OptionalExtensions Mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>OptionalExtensions WatchOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>OptionalExtensions iOS Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>OptionalExtensions iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>OptionalExtensions tvOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C7263FBB1C3C6BB200F402F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7263FC91C3C6C9E00F402F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7263FD71C3C6D1000F402F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C7EC1DC31C34503A00BA1261</key>
 		<dict>
 			<key>primary</key>
