@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-               BuildableName = "OptionalExtensions_iOS.framework"
+               BuildableName = "OptionalExtensions.framework"
                BlueprintName = "OptionalExtensions iOS"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-            BuildableName = "OptionalExtensions_iOS.framework"
+            BuildableName = "OptionalExtensions.framework"
             BlueprintName = "OptionalExtensions iOS"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-            BuildableName = "OptionalExtensions_iOS.framework"
+            BuildableName = "OptionalExtensions.framework"
             BlueprintName = "OptionalExtensions iOS"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
-            BuildableName = "OptionalExtensions_iOS.framework"
+            BuildableName = "OptionalExtensions.framework"
             BlueprintName = "OptionalExtensions iOS"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
