@@ -19,14 +19,14 @@ public extension Optional {
         return self ?? replacement
     }
     
-    func apply(@noescape f: Wrapped -> Void) {
+    func then(@noescape f: Wrapped -> Void) {
         
         if let wrapped = self { f(wrapped) }
     }
     
     func onSome(@noescape f: Wrapped -> Void) -> Optional {
         
-        apply(f)
+        then(f)
         return self
     }
     

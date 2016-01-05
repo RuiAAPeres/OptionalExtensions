@@ -35,11 +35,11 @@ class OptionalExtensionsTests: XCTestCase {
         var testInt = 0
 
         let nilledNumber: Int? = nil
-        nilledNumber.apply { testInt = $0 }
+        nilledNumber.then { testInt = $0 }
         XCTAssertTrue(testInt == 0)
 
         let number: Int? = 3
-        number.apply { testInt = $0 }
+        number.then { testInt = $0 }
         XCTAssertTrue(testInt == 3)
     }
     

@@ -32,14 +32,14 @@ let nilledNumber: Int? = nil
 nilledNumber.replaceNil(with: 2) // .Some(2)
 ```
 
-####`apply: (T -> Void) -> Void` (similar to `[T]`'s `forEach`)
+####`then: (T -> Void) -> Void` (similar to `[T]`'s `forEach`)
 
 ```swift
 let number: Int? = 3
-number.apply { print($0) } // prints "3"
+number.then { print($0) } // prints "3"
 
 let nilledNumber: Int? = nil
-nilledNumber.apply { print($0) } // print won't be called
+nilledNumber.then { print($0) } // print won't be called
 ```
 
 ####`onSome: (T -> Void) -> Optional<T>` (injects a side effect in the `.Some` branch)
