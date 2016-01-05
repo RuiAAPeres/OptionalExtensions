@@ -52,7 +52,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
 ```
 
-####`onNone: (T -> Void) -> Optional<T>` (injects a side effect in the `.None` branch)
+####`onNone: (Void -> Void) -> Optional<T>` (injects a side effect in the `.None` branch)
 
 ```swift
 let number: Int? = 3
