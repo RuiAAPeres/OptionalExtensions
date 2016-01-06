@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7120AAD1C348DE600867028"
-               BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+               BuildableName = "OptionalExtensions iOS Tests.xctest"
                BlueprintName = "OptionalExtensions iOS Tests"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
@@ -34,7 +34,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7120AAD1C348DE600867028"
-               BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+               BuildableName = "OptionalExtensions iOS Tests.xctest"
                BlueprintName = "OptionalExtensions iOS Tests"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7120AAD1C348DE600867028"
-            BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+            BuildableName = "OptionalExtensions iOS Tests.xctest"
             BlueprintName = "OptionalExtensions iOS Tests"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7120AAD1C348DE600867028"
-            BuildableName = "OptionalExtensions_iOS_Tests.xctest"
+            BuildableName = "OptionalExtensions iOS Tests.xctest"
             BlueprintName = "OptionalExtensions iOS Tests"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
