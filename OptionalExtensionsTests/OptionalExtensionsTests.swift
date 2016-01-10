@@ -95,4 +95,15 @@ class OptionalExtensionsTests: XCTestCase {
         let nilledNumber: Int? = nil
         XCTAssert(nilledNumber != 3)
     }
+    
+    func testMaybe() {
+        
+        let number: Int? = 3
+        let value = number.maybe(100) { $0 + 1 }
+        XCTAssertEqual(value, 4)
+        
+        let nilledNumber: Int? = nil
+        let value1 = nilledNumber.maybe(100) { $0 + 1 }
+        XCTAssertEqual(value1, 100)
+    }
 }

@@ -32,6 +32,15 @@ public extension Optional {
 
         if let wrapped = self { f(wrapped) }
     }
+    
+    @warn_unused_result
+    func maybe<U>(defaultValue: U, @noescape f: Wrapped -> U) -> U {
+        
+        switch map(f) {
+        case .Some(let val): return val
+        default: return defaultValue
+        }
+    }
 
     @warn_unused_result
     func onSome(@noescape f: Wrapped -> Void) -> Optional {
