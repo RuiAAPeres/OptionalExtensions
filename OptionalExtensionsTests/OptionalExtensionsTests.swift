@@ -87,15 +87,6 @@ class OptionalExtensionsTests: XCTestCase {
         XCTAssertTrue(nilledNumber.isNone)
     }
     
-    func testEquatable() {
-        
-        let number: Int? = 3
-        XCTAssert(number == 3)
-        
-        let nilledNumber: Int? = nil
-        XCTAssert(nilledNumber != 3)
-    }
-    
     func testMaybe() {
         
         let number: Int? = 3

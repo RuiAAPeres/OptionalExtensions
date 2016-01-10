@@ -14,7 +14,6 @@ Swift's Optional is pretty awesome, but it can always get better. This repositor
 Operators
 --------
 
-* [==](https://github.com/RuiAAPeres/OptionalExtensions#-wrapped-optionalwrapped---bool)
 * [filter](https://github.com/RuiAAPeres/OptionalExtensions#filter-wrapped---bool---optionalwrapped)
 * [replaceNil](https://github.com/RuiAAPeres/OptionalExtensions#replacenil-wrapped---optionalwrapped)
 * [then](https://github.com/RuiAAPeres/OptionalExtensions#then-wrapped---void---void-similar-to-ts-foreach)
@@ -23,17 +22,6 @@ Operators
 * [onNone](https://github.com/RuiAAPeres/OptionalExtensions#onnone-void---void---optionalwrapped-injects-a-side-effect-in-the-none-branch)
 * [isSome](https://github.com/RuiAAPeres/OptionalExtensions#issome-bool)
 * [isNone](https://github.com/RuiAAPeres/OptionalExtensions#isnone-bool)
-
-
-####`==: (Wrapped, Optional<Wrapped>) -> Bool`
-
-```swift
-let number: Int? = 3
-let isEqual = number == 3 // true
-
-let nilledNumber: Int? = nil
-let isNotEqual = nilledNumber == 3 // false
-```
 
 ####`filter: (Wrapped -> Bool) -> Optional<Wrapped>`
 
