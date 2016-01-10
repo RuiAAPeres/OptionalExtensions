@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "OptionalExtensions"
-    s.version          = "1.0"
+    s.version          = "1.1"
     s.summary          = "Swift µframework with extensions for the Optional Type"
     s.description  = <<-EOS
   Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
