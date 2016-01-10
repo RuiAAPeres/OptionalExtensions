@@ -20,20 +20,6 @@
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DA0535A1C3DC5F3001F27B2"
-               BuildableName = "OptionalExtensions Mac Tests.xctest"
-               BlueprintName = "OptionalExtensions Mac Tests"
-               ReferencedContainer = "container:OptionalExtensions.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

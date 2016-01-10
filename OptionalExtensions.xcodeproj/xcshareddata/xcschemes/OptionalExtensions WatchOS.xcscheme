@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C7263FBB1C3C6BB200F402F9"
+            BuildableName = "OptionalExtensions.framework"
+            BlueprintName = "OptionalExtensions watchOS"
+            ReferencedContainer = "container:OptionalExtensions.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
