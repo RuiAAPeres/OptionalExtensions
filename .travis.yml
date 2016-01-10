@@ -1,27 +1,7 @@
 language: objective-c
 osx_image: xcode7.2
-env:
-  matrix:
-    - SCHEME="OptionalExtensions iOS"       SDK="iphonesimulator"   DESTINATION="platform=iOS Simulator,name=iPhone 6s"               RUN_TESTS="YES"
-    - SCHEME="OptionalExtensions Mac"       SDK="macosx"            DESTINATION="platform=OS X,arch=x86_64"                           RUN_TESTS="YES"
-    # NOTE: tvOS tests are disabled due the lack of support from xctool (https://github.com/facebook/xctool/issues/625)
-    - SCHEME="OptionalExtensions tvOS"      SDK="appletvsimulator"  DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p"         RUN_TESTS="NO"
-    - SCHEME="OptionalExtensions watchOS"   SDK="watchsimulator"    DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm"  RUN_TESTS="NO"
 script:
-    - set -o pipefail
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - xcrun simctl list
-    - xctool --version
-
-    - if [ $RUN_TESTS == "YES" ]; then
-        xctool -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test -parallelize;
-      else
-        xctool -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug build;
-      fi
-
-    - if [ $RUN_TESTS == "YES" ]; then
-        xctool -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release test -parallelize;
-      else
-        xctool -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release build;
-      fi
+  - xcodebuild test -scheme OptionalExtensions-Mac
+  - xcodebuild test -scheme OptionalExtensions-iOS -sdk iphonesimulator
+  - xcodebuild test -scheme OptionalExtensions-tvOS -sdk appletvsimulator
+  - xcodebuild build -scheme OptionalExtensions-watchOS -sdk watchsimulator
