@@ -6,7 +6,6 @@
 //  Copyright © 2015 Rui Peres. All rights reserved.
 //
 
-
 public extension Optional {
 
     func filter(@noescape predicate: Wrapped -> Bool) -> Optional {
