@@ -90,9 +90,9 @@ class OptionalExtensionsTests: XCTestCase {
     func testIsEqutable() {
         
         let number: Int? = 3
-        XCTAssertTrue(number, 3)
+        XCTAssert(number == 3)
         
         let nilledNumber: Int? = nil
-        XCTAssertFalse(nilledNumber, 3)
+        XCTAssert(nilledNumber != 3)
     }
 }
