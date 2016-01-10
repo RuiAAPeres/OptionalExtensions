@@ -11,6 +11,20 @@ Why?
 
 Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
 
+Operators
+--------
+
+* [Equatable](https://github.com/RuiAAPeres/OptionalExtensions#equatable-wrapped-optionalwrapped---bool)
+* [filter](https://github.com/RuiAAPeres/OptionalExtensions#filter-wrapped---bool---optionalwrapped)
+* [replaceNil](https://github.com/RuiAAPeres/OptionalExtensions#replacenil-wrapped---optionalwrapped)
+* [then](https://github.com/RuiAAPeres/OptionalExtensions#then-wrapped---void---void-similar-to-ts-foreach)
+* [maybe](https://github.com/RuiAAPeres/OptionalExtensions#maybe-u---wrapped---u---u-similar-to-haskells-maybe)
+* [onSome](https://github.com/RuiAAPeres/OptionalExtensions#onsome-wrapped---void---optionalwrapped-injects-a-side-effect-in-the-some-branch)
+* [onNone](https://github.com/RuiAAPeres/OptionalExtensions#onnone-void---void---optionalwrapped-injects-a-side-effect-in-the-none-branch)
+* [isSome](https://github.com/RuiAAPeres/OptionalExtensions#issome-bool)
+* [isNone](https://github.com/RuiAAPeres/OptionalExtensions#isnone-bool)
+
+
 ####`Equatable: (Wrapped, Optional<Wrapped>) -> Bool`
 
 ```swift
