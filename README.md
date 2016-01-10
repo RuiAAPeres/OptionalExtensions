@@ -101,6 +101,12 @@ Carthage:
 github "RuiAAPeres/OptionalExtensions"
 ```
 
+Cocoapods:
+
+```
+pod "OptionalExtensions"
+```
+
 Contributing
 -----------
 
