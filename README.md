@@ -11,7 +11,7 @@ Why?
 
 Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
 
-####`Equatable: (T, Optional<T>) -> Bool`
+####`Equatable: (Wrapped, Optional<Wrapped>) -> Bool`
 
 ```swift
 let number: Int? = 3
@@ -21,7 +21,7 @@ let nilledNumber: Int? = nil
 let isNotEqual = nilledNumber == 3 // false
 ```
 
-####`filter: (T -> Bool) -> Optional<T>`
+####`filter: (Wrapped -> Bool) -> Optional<Wrapped>`
 
 ```swift
 let number: Int? = 3
@@ -32,7 +32,7 @@ let biggerThan2 = number.filter { $0 > 2 } // .Some(3)
 let biggerThan3 = number.filter { $0 > 3 } // .None
 ```
 
-####`replaceNil: T -> Optional<T>`
+####`replaceNil: Wrapped -> Optional<Wrapped>`
 
 ```swift
 let number: Int? = 3
@@ -42,7 +42,7 @@ let nilledNumber: Int? = nil
 nilledNumber.replaceNil(with: 2) // .Some(2)
 ```
 
-####`then: (T -> Void) -> Void` (similar to `[T]`'s `forEach`)
+####`then: (Wrapped -> Void) -> Void` (similar to `[T]`'s `forEach`)
 
 ```swift
 let number: Int? = 3
@@ -52,7 +52,7 @@ let nilledNumber: Int? = nil
 nilledNumber.then { print($0) } // print won't be called
 ```
 
-####`maybe: U -> (T -> U) -> U` (similar to Haskell's `maybe`)
+####`maybe: U -> (Wrapped -> U) -> U` (similar to Haskell's `maybe`)
 
 ```swift
 let number: Int? = 3
@@ -62,7 +62,7 @@ let nilledNumber: Int? = nil
 nilledNumber.maybe(100) { $0 + 1 } // 100
 ```
 
-####`onSome: (T -> Void) -> Optional<T>` (injects a side effect in the `.Some` branch)
+####`onSome: (Wrapped -> Void) -> Optional<Wrapped>` (injects a side effect in the `.Some` branch)
 
 ```swift
 let number: Int? = 3
@@ -72,7 +72,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
 ```
 
-####`onNone: (Void -> Void) -> Optional<T>` (injects a side effect in the `.None` branch)
+####`onNone: (Void -> Void) -> Optional<Wrapped>` (injects a side effect in the `.None` branch)
 
 ```swift
 let number: Int? = 3
