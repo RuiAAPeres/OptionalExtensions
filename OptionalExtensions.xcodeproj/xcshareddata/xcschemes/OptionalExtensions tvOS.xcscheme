@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
+               BlueprintIdentifier = "C7263FC91C3C6C9E00F402F9"
                BuildableName = "OptionalExtensions.framework"
-               BlueprintName = "OptionalExtensions iOS"
-               ReferencedContainer = "container:OptionalExtensions.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E7120AAD1C348DE600867028"
-               BuildableName = "OptionalExtensions iOS Tests.xctest"
-               BlueprintName = "OptionalExtensions iOS Tests"
+               BlueprintName = "OptionalExtensions tvOS"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E7120AAD1C348DE600867028"
-               BuildableName = "OptionalExtensions iOS Tests.xctest"
-               BlueprintName = "OptionalExtensions iOS Tests"
+               BlueprintIdentifier = "7DA0536A1C3DC675001F27B2"
+               BuildableName = "OptionalExtensions tvOS Tests.xctest"
+               BlueprintName = "OptionalExtensions tvOS Tests"
                ReferencedContainer = "container:OptionalExtensions.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
+            BlueprintIdentifier = "C7263FC91C3C6C9E00F402F9"
             BuildableName = "OptionalExtensions.framework"
-            BlueprintName = "OptionalExtensions iOS"
+            BlueprintName = "OptionalExtensions tvOS"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -78,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
+            BlueprintIdentifier = "C7263FC91C3C6C9E00F402F9"
             BuildableName = "OptionalExtensions.framework"
-            BlueprintName = "OptionalExtensions iOS"
+            BlueprintName = "OptionalExtensions tvOS"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7EC1DC31C34503A00BA1261"
+            BlueprintIdentifier = "C7263FC91C3C6C9E00F402F9"
             BuildableName = "OptionalExtensions.framework"
-            BlueprintName = "OptionalExtensions iOS"
+            BlueprintName = "OptionalExtensions tvOS"
             ReferencedContainer = "container:OptionalExtensions.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
