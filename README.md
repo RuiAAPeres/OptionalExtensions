@@ -118,19 +118,19 @@ let isSome = nilledNumber.isNone // true
 Setup
 -----
 
-Carthage:
+**Carthage:**
 
 ```
 github "RuiAAPeres/OptionalExtensions"
 ```
 
-Cocoapods:
+**Cocoapods:**
 
 ```
 pod "OptionalExtensions"
 ```
 
-Manually:
+**Manually:**
 
 Grab the [OptionalExtensions.swift](https://github.com/RuiAAPeres/OptionalExtensions/blob/master/OptionalExtensions/Source/OptionalExtensions.swift) file and drop it in your project. 
 
