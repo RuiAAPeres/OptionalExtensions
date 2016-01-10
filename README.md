@@ -66,7 +66,7 @@ nilledNumber.maybe(100) { $0 + 1 } // 100
 
 ```swift
 let number: Int? = 3
-let sameNumber = number.onSome { print($0) } // prints "3" & returns .Optional(3)
+let sameNumber = number.onSome { print($0) } // prints "3" & returns .Some(3)
 
 let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
