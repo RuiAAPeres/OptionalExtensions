@@ -29,6 +29,7 @@
 		C7263FBC1C3C6BB200F402F9 /* OptionalExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionalExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7263FCA1C3C6C9E00F402F9 /* OptionalExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionalExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7263FD81C3C6D1000F402F9 /* OptionalExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionalExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77934771C41E79E00A7DAB7 /* OptionalExtensions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OptionalExtensions.playground; sourceTree = "<group>"; };
 		C7EC1DC41C34503A00BA1261 /* OptionalExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionalExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EC1DD11C3450A200BA1261 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
 		C7EC1DD41C345DD900BA1261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		C7EC1DBA1C34503A00BA1261 = {
 			isa = PBXGroup;
 			children = (
+				C77934771C41E79E00A7DAB7 /* OptionalExtensions.playground */,
 				C7EC1DC61C34503A00BA1261 /* OptionalExtensions */,
 				E7120AAF1C348DE700867028 /* OptionalExtensionsTests */,
 				C7EC1DC51C34503A00BA1261 /* Products */,
