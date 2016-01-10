@@ -52,6 +52,16 @@ let nilledNumber: Int? = nil
 nilledNumber.then { print($0) } // print won't be called
 ```
 
+####`maybe: U -> (T -> U) -> U` (similar to Haskell's `maybe`)
+
+```swift
+let number: Int? = 3
+number.maybe(100) { $0 + 1 } // 4
+
+let nilledNumber: Int? = nil
+nilledNumber.maybe(100) { $0 + 1 } // 100
+```
+
 ####`onSome: (T -> Void) -> Optional<T>` (injects a side effect in the `.Some` branch)
 
 ```swift
