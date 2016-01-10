@@ -130,6 +130,11 @@ Cocoapods:
 pod "OptionalExtensions"
 ```
 
+Manually:
+
+Grab the [OptionalExtensions.swift](https://github.com/RuiAAPeres/OptionalExtensions/blob/master/OptionalExtensions/Source/OptionalExtensions.swift) file and drop it in your project. 
+
+
 Contributing
 -----------
 
