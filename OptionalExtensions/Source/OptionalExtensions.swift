@@ -16,11 +16,13 @@ public func ==<T: Equatable>(lhs: T, rhs: Optional<T>) -> Bool {
 
 public extension Optional {
 
+    @warn_unused_result
     func filter(@noescape predicate: Wrapped -> Bool) -> Optional {
 
         return map(predicate) == .Some(true) ? self : .None
     }
 
+    @warn_unused_result
     func replaceNil(with replacement: Wrapped) -> Optional {
 
         return self ?? replacement
@@ -31,12 +33,14 @@ public extension Optional {
         if let wrapped = self { f(wrapped) }
     }
 
+    @warn_unused_result
     func onSome(@noescape f: Wrapped -> Void) -> Optional {
 
         then(f)
         return self
     }
 
+    @warn_unused_result
     func onNone(@noescape f: Void -> Void) -> Optional {
 
         if isNone { f() }
@@ -48,7 +52,7 @@ public extension Optional {
         return self != nil
     }
 
-    var isNone: Bool {
+        var isNone: Bool {
 
         return !isSome
     }
