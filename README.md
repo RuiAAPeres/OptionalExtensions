@@ -11,6 +11,16 @@ Why?
 
 Swift's Optional is pretty awesome, but it can always get better. This repository is an humble attempt to add some utility methods to it.
 
+####`Equatable: (T, Optional<T>) -> Bool`
+
+```swift
+let number: Int? = 3
+let isEqual = number == 3 // true
+
+let nilledNumber: Int? = nil
+let isNotEqual = nilledNumber == 3 // false
+```
+
 ####`filter: (T -> Bool) -> Optional<T>`
 
 ```swift
