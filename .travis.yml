@@ -2,8 +2,8 @@ language: objective-c
 osx_image: xcode7.2
 script:
   - xctool -scheme "OptionalExtensions-Mac" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test -parallelize
-  - xctool -scheme "OptionalExtensions-iOS" -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test -parallelize GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
   - xctool -scheme "OptionalExtensions-tvOS" DESTINATION="platform=tvOS Simulator,name=Apple TV 1080p" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO build clean
   - xctool -scheme "OptionalExtensions-tvOS" DESTINATION="platform=watchOS Simulator,name=Apple Watch - 38mm" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO build clean
+  - xctool -scheme "OptionalExtensions-iOS" -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test -parallelize GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
-- bash <(curl -s https://codecov.io/bash)>
+  - bash <(curl -s https://codecov.io/bash)>
