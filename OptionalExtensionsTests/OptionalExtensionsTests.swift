@@ -37,7 +37,7 @@ class OptionalExtensionsTests: XCTestCase {
     
     // MARK: - replaceNil
     
-    func test_replaceNil_whenInvokedWithNonNil_thenReturnsOrginalValue() {
+    func test_replaceNil_whenInvokedWithNonNil_thenReturnsOriginalValue() {
         // given
         let number: Int? = 3
         
@@ -87,7 +87,7 @@ class OptionalExtensionsTests: XCTestCase {
     
     // MARK: - onSome
     
-    func test_onSome_whenInvokedOnNonNilValue_thenOperationIsInvoked_andValueIsReturned() {
+    func test_onSome_whenInvokedOnNonNilValue_thenOperationIsInvoked_andOperationResultIsReturned() {
         // given
         var testInt = 0
         let nonNilledNumber: Int? = 3
@@ -115,7 +115,7 @@ class OptionalExtensionsTests: XCTestCase {
     
     // MARK: - onNone
     
-    func test_onNone_whenInvokedOnNonNilValue_thenOperationIsNotInvoked_andValueIsReturned() {
+    func test_onNone_whenInvokedOnNonNilValue_thenOperationIsNotInvoked_andOperationResultIsReturned() {
         // given
         var testInt = 0
         let nonNilledNumber: Int? = 3
@@ -179,7 +179,7 @@ class OptionalExtensionsTests: XCTestCase {
     
     // MARK: - maybe
     
-    func test_maybe_whenInvokedOnNonNilValue_withNonNilPredicate_thenExecutesOperationAndReturnsItsResult() {
+    func test_maybe_whenInvokedOnNonNilValue_thenExecutesOperationAndReturnsItsResult() {
         // given
         let nonNilledNumber: Int? = 1
         
@@ -190,7 +190,7 @@ class OptionalExtensionsTests: XCTestCase {
         XCTAssertEqual(result, 51)
     }
     
-    func test_maybe_whenInvokedOnNilValue_withNilPredicate_thenDoesNotExecuteOperationAndReturnsPredicate() {
+    func test_maybe_whenInvokedOnNilValue_thenDoesNotExecuteOperationAndReturnsDefaultValue() {
         // given
         let nilledNumber: Int? = nil
         
