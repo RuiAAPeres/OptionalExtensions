@@ -11,90 +11,193 @@ import OptionalExtensions
 
 class OptionalExtensionsTests: XCTestCase {
     
-    func testFilter() {
+    // MARK: - filter
+    
+    func test_filter_whenPredicateMatches_thenReturnsOptionalValue() {
+        // given
         let number: Int? = 3
         
-        let biggerThan2 = number.filter { $0 > 2 }
-        let biggerThan3 = number.filter { $0 > 3 }
+        // when
+        let result = number.filter { $0 > 2 }
         
-        XCTAssertTrue(biggerThan2 == .Some(3))
-        XCTAssertTrue(biggerThan3 == .None)
+        // then
+        XCTAssertEqual(result, 3)
     }
     
-    func testReplaceNil() {
+    func test_filter_whenPredicateDoesNotMatch_thenReturnsNil() {
+        // given
         let number: Int? = 3
-        let opt3 = number.replaceNil(with: 2)
-        XCTAssertTrue(opt3 == .Some(3))
         
+        // when
+        let result = number.filter { $0 > 3 }
+        
+        // then
+        XCTAssertNil(result)
+    }
+    
+    // MARK: - replaceNil
+    
+    func test_replaceNil_whenInvokedWithNonNil_thenReturnsOrginalValue() {
+        // given
+        let number: Int? = 3
+        
+        // when
+        let result = number.replaceNil(with: 2)
+        
+        // then
+        XCTAssertEqual(result, 3)
+    }
+    
+    func test_replaceNil_whenInvokedWithNil_thenReturnsReplacedValue() {
+        // given
         let nilledNumber: Int? = nil
-        let opt2 = nilledNumber.replaceNil(with: 2)
-        XCTAssertTrue(opt2 == .Some(2))
+        
+        // when
+        let result = nilledNumber.replaceNil(with: 2)
+        
+        // then
+        XCTAssertEqual(result, 2)
     }
     
-    func testApply() {
+    // MARK: - then
+    
+    func test_then_whenInvokedOnNonNilValue_thenOperationIsInvoked() {
+        // given
         var testInt = 0
-
-        let nilledNumber: Int? = nil
-        nilledNumber.then { testInt = $0 }
-        XCTAssertTrue(testInt == 0)
-
-        let number: Int? = 3
-        number.then { testInt = $0 }
-        XCTAssertTrue(testInt == 3)
+        let nonNilledNumber: Int? = 3
+        
+        // when
+        nonNilledNumber.then { _ in testInt = 2 }
+        
+        // then
+        XCTAssertEqual(testInt, 2)
     }
     
-    func testOnSome() {
+    func test_then_whenInvokedOnNilValue_thenOperationIsNotInvoked() {
+        // given
         var testInt = 0
-        
         let nilledNumber: Int? = nil
-        let sameNilledNumber = nilledNumber.onSome { print($0) }
-        XCTAssertTrue(testInt == 0)
-        XCTAssertTrue(sameNilledNumber == .None)
-
-        let number: Int? = 3
-        let sameNumber = number.onSome { testInt = $0 }
-        XCTAssertTrue(testInt == 3)
-        XCTAssertTrue(sameNumber == .Some(3))
+        
+        // when
+        nilledNumber.then { _ in testInt = 2 }
+        
+        // then
+        XCTAssertEqual(testInt, 0)
     }
     
-    func testOnNone() {
+    // MARK: - onSome
+    
+    func test_onSome_whenInvokedOnNonNilValue_thenOperationIsInvoked_andValueIsReturned() {
+        // given
         var testInt = 0
+        let nonNilledNumber: Int? = 3
         
-        let number: Int? = 3
-        let sameNumber = number.onNone { testInt = 99 }
-        XCTAssertTrue(testInt == 0)
-        XCTAssertTrue(sameNumber == .Some(3))
+        // when
+        let result = nonNilledNumber.onSome { _ in testInt = 2 }
         
-        let nilledNumber: Int? = nil
-        let sameNilledNumber = nilledNumber.onNone { testInt = 99 }
-        XCTAssertTrue(testInt == 99)
-        XCTAssertTrue(sameNilledNumber == .None)
+        // then
+        XCTAssertEqual(testInt, 2)
+        XCTAssertEqual(result, 3)
     }
     
-    func testIsSome() {
+    func test_onSome_whenInvokedOnNilValue_thenOperationIsNotInvoked_andNilIsReturned() {
+        // given
+        var testInt = 0
+        let nilledNumber: Int? = nil
+        
+        // when
+        let result = nilledNumber.onSome { _ in testInt = 2 }
+        
+        // then
+        XCTAssertEqual(testInt, 0)
+        XCTAssertNil(result)
+    }
+    
+    // MARK: - onNone
+    
+    func test_onSome_whenInvokedOnNonNilValue_thenOperationIsNotInvoked_andValueIsReturned() {
+        // given
+        var testInt = 0
+        let nonNilledNumber: Int? = 3
+        
+        // when
+        let result = nonNilledNumber.onNone { _ in testInt = 2 }
+        
+        // then
+        XCTAssertEqual(testInt, 0)
+        XCTAssertEqual(result, 3)
+    }
+    
+    func test_onSome_whenInvokedOnNilValue_thenOperationIsInvoked_andNilIsReturned() {
+        // given
+        var testInt = 0
+        let nilledNumber: Int? = nil
+        
+        // when
+        let result = nilledNumber.onNone { _ in testInt = 2 }
+        
+        // then
+        XCTAssertEqual(testInt, 2)
+        XCTAssertNil(result)
+    }
+    
+    // MARK: - isSome
+    
+    func test_isSome_whenInvokedOnNonNilValue_thenReturnsTrue() {
+        // given
         let number: Int? = 3
+        
+        // then
         XCTAssertTrue(number.isSome)
-        
+    }
+    
+    func test_isSome_whenInvokedOnNilValue_thenReturnsFalse() {
+        // given
         let nilledNumber: Int? = nil
+        
+        // then
         XCTAssertFalse(nilledNumber.isSome)
     }
     
-    func testIsNone() {
+    // MARK: - isNone
+    
+    func test_isNone_whenInvokedOnNonNilValue_thenReturnsFalse() {
+        // given
         let number: Int? = 3
-        XCTAssertFalse(number.isNone)
         
+        // then
+        XCTAssertFalse(number.isNone)
+    }
+    
+    func test_isNone_whenInvokedOnNilValue_thenReturnsTrue() {
+        // given
         let nilledNumber: Int? = nil
+        
+        // then
         XCTAssertTrue(nilledNumber.isNone)
     }
     
-    func testMaybe() {
+    // MARK: - maybe
+    
+    func test_maybe_whenInvokedOnNonNilValue_withNonNilPredicate_thenExecutesOperationAndReturnsItsResult() {
+        // given
+        let nonNilledNumber: Int? = 1
         
-        let number: Int? = 3
-        let value = number.maybe(100) { $0 + 1 }
-        XCTAssertEqual(value, 4)
+        // when
+        let result = nonNilledNumber.maybe(100) { $0 + 50 }
         
+        // then
+        XCTAssertEqual(result, 51)
+    }
+    
+    func test_maybe_whenInvokedOnNilValue_withNilPredicate_thenDoesNotExecuteOperationAndReturnsPredicate() {
+        // given
         let nilledNumber: Int? = nil
-        let value1 = nilledNumber.maybe(100) { $0 + 1 }
-        XCTAssertEqual(value1, 100)
+        
+        // when
+        let result = nilledNumber.maybe(100) { $0 + 50 }
+        
+        // then
+        XCTAssertEqual(result, 100)
     }
 }
