@@ -39,10 +39,10 @@ class OptionalExtensionsTests: XCTestCase {
     
     func test_replaceNil_whenInvokedWithNonNil_thenReturnsOriginalValue() {
         // given
-        let number: Int? = 3
+        let nonNilledNumber: Int? = 3
         
         // when
-        let result = number.replaceNil(with: 2)
+        let result = nonNilledNumber.replaceNil(with: 2)
         
         // then
         XCTAssertEqual(result, 3)
@@ -145,10 +145,10 @@ class OptionalExtensionsTests: XCTestCase {
     
     func test_isSome_whenInvokedOnNonNilValue_thenReturnsTrue() {
         // given
-        let number: Int? = 3
+        let nonNilledNumber: Int? = 3
         
         // then
-        XCTAssertTrue(number.isSome)
+        XCTAssertTrue(nonNilledNumber.isSome)
     }
     
     func test_isSome_whenInvokedOnNilValue_thenReturnsFalse() {
@@ -163,10 +163,10 @@ class OptionalExtensionsTests: XCTestCase {
     
     func test_isNone_whenInvokedOnNonNilValue_thenReturnsFalse() {
         // given
-        let number: Int? = 3
+        let nonNilledNumber: Int? = 3
         
         // then
-        XCTAssertFalse(number.isNone)
+        XCTAssertFalse(nonNilledNumber.isNone)
     }
     
     func test_isNone_whenInvokedOnNilValue_thenReturnsTrue() {
