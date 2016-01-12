@@ -115,7 +115,7 @@ class OptionalExtensionsTests: XCTestCase {
     
     // MARK: - onNone
     
-    func test_onSome_whenInvokedOnNonNilValue_thenOperationIsNotInvoked_andValueIsReturned() {
+    func test_onNone_whenInvokedOnNonNilValue_thenOperationIsNotInvoked_andValueIsReturned() {
         // given
         var testInt = 0
         let nonNilledNumber: Int? = 3
@@ -128,7 +128,7 @@ class OptionalExtensionsTests: XCTestCase {
         XCTAssertEqual(result, 3)
     }
     
-    func test_onSome_whenInvokedOnNilValue_thenOperationIsInvoked_andNilIsReturned() {
+    func test_onNone_whenInvokedOnNilValue_thenOperationIsInvoked_andNilIsReturned() {
         // given
         var testInt = 0
         let nilledNumber: Int? = nil
