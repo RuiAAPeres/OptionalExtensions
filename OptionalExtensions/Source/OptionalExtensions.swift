@@ -28,10 +28,7 @@ public extension Optional {
     @warn_unused_result
     func maybe<U>(defaultValue: U, @noescape f: Wrapped -> U) -> U {
         
-        switch map(f) {
-        case .Some(let val): return val
-        default: return defaultValue
-        }
+        return map(f) ?? defaultValue
     }
 
     @warn_unused_result
