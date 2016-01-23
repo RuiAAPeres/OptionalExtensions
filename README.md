@@ -112,7 +112,7 @@ Setup
 github "RuiAAPeres/OptionalExtensions"
 ```
 
-**Cocoapods:**
+**CocoaPods:**
 
 ```
 pod "OptionalExtensions"
