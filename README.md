@@ -16,8 +16,8 @@ Operators
 --------
 
 * [filter](https://github.com/RuiAAPeres/OptionalExtensions#filter-wrapped---bool---optionalwrapped)
-* [mapNil](https://github.com/RuiAAPeres/OptionalExtensions#mapNil-void---wrapped---optionalwrapped)
-* [flatMapNil](https://github.com/RuiAAPeres/OptionalExtensions#flatMapNil-void---optionalwrapped---optionalwrapped)
+* [mapNil](https://github.com/RuiAAPeres/OptionalExtensions#mapnil-void---wrapped---optionalwrapped)
+* [flatMapNil](https://github.com/RuiAAPeres/OptionalExtensions#flatmapnil-void---optionalwrapped---optionalwrapped)
 * [then](https://github.com/RuiAAPeres/OptionalExtensions#then-wrapped---void---void-similar-to-ts-foreach)
 * [maybe](https://github.com/RuiAAPeres/OptionalExtensions#maybe-u---wrapped---u---u-similar-to-haskells-maybe)
 * [onSome](https://github.com/RuiAAPeres/OptionalExtensions#onsome-wrapped---void---optionalwrapped-injects-a-side-effect-in-the-some-branch)
