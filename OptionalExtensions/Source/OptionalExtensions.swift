@@ -15,9 +15,15 @@ public extension Optional {
     }
 
     @warn_unused_result
-    func replaceNil(with replacement: Wrapped) -> Optional {
-
-        return self ?? replacement
+    func mapNil(@noescape predicate: Void -> Wrapped) -> Optional {
+        
+        return self ?? .Some(predicate())
+    }
+    
+    @warn_unused_result
+    func flatMapNil(@noescape predicate: Void -> Optional) -> Optional {
+        
+        return self ?? predicate()
     }
 
     func then(@noescape f: Wrapped -> Void) {

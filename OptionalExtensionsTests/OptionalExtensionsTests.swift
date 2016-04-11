@@ -35,30 +35,55 @@ class OptionalExtensionsTests: XCTestCase {
         XCTAssertNil(result)
     }
     
-    // MARK: - replaceNil
     
-    func test_replaceNil_whenInvokedWithNonNil_thenReturnsOriginalValue() {
+    // MARK: - mapNil
+    
+    func test_mapNil_whenInvokedWithNonNil_thenReturnsOriginalValue() {
         // given
-        let nonNilledNumber: Int? = 3
+        let number: Int? = 3
         
         // when
-        let result = nonNilledNumber.replaceNil(with: 2)
+        let result = number.mapNil { 5 }
         
         // then
         XCTAssertEqual(result, 3)
     }
     
-    func test_replaceNil_whenInvokedWithNil_thenReturnsReplacedValue() {
+    func test_mapNil_whenInvokedWithNil_thenReturnsReplacedValue() {
         // given
         let nilledNumber: Int? = nil
         
         // when
-        let result = nilledNumber.replaceNil(with: 2)
+        let result = nilledNumber.mapNil { 5 }
         
         // then
-        XCTAssertEqual(result, 2)
+        XCTAssertEqual(result, 5)
     }
     
+    // MARK: - flatMapNil
+    
+    func test_flatMapNil_whenInvokedWithNonNil_thenReturnsOriginalValue() {
+        // given
+        let number: Int? = 3
+        
+        // when
+        let result = number.flatMapNil { .Some(2) }
+        
+        // then
+        XCTAssertEqual(result, .Some(3))
+    }
+    
+    func test_flatMapNil_whenInvokedWithNil_thenReturnsReplacedValue() {
+        // given
+        let nilledNumber: Int? = nil
+        
+        // when
+        let result = nilledNumber.flatMapNil { .Some(2) }
+        
+        // then
+        XCTAssertEqual(result, .Some(2))
+    }
+
     // MARK: - then
     
     func test_then_whenInvokedOnNonNilValue_thenOperationIsInvoked() {

@@ -16,7 +16,8 @@ Operators
 --------
 
 * [filter](https://github.com/RuiAAPeres/OptionalExtensions#filter-wrapped---bool---optionalwrapped)
-* [replaceNil](https://github.com/RuiAAPeres/OptionalExtensions#replacenil-wrapped---optionalwrapped)
+* [mapNil](https://github.com/RuiAAPeres/OptionalExtensions#mapNil-void---wrapped---optionalwrapped)
+* [flatMapNil](https://github.com/RuiAAPeres/OptionalExtensions#flatMapNil-void---optionalwrapped---optionalwrapped)
 * [then](https://github.com/RuiAAPeres/OptionalExtensions#then-wrapped---void---void-similar-to-ts-foreach)
 * [maybe](https://github.com/RuiAAPeres/OptionalExtensions#maybe-u---wrapped---u---u-similar-to-haskells-maybe)
 * [onSome](https://github.com/RuiAAPeres/OptionalExtensions#onsome-wrapped---void---optionalwrapped-injects-a-side-effect-in-the-some-branch)
@@ -34,14 +35,24 @@ let biggerThan2 = number.filter { $0 > 2 } // .Some(3)
 let biggerThan3 = number.filter { $0 > 3 } // .None
 ```
 
-####`replaceNil: Wrapped -> Optional<Wrapped>`
+####`mapNil: (Void -> Wrapped) -> Optional<Wrapped>`
 
 ```swift
 let number: Int? = 3
-number.replaceNil(with: 2) // .Some(3)
+number.mapNil { 2 } // .Some(3)
 
 let nilledNumber: Int? = nil
-nilledNumber.replaceNil(with: 2) // .Some(2)
+nilledNumber.mapNil { 2 } // .Some(2)
+```
+
+####`flatMapNil: (Void -> Optional<Wrapped>) -> Optional<Wrapped>`
+
+```swift
+let number: Int? = 3
+number.flatMapNil { .Some(2) } // .Some(3)
+
+let nilledNumber: Int? = nil
+nilledNumber.flatMapNil { .Some(2) } // .Some(2)
 ```
 
 ####`then: (Wrapped -> Void) -> Void` (similar to `[T]`'s `forEach`)
