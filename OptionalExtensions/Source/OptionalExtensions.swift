@@ -7,45 +7,40 @@
 //
 
 public extension Optional {
+    
+    func filter(_ predicate: @noescape (Wrapped) -> Bool) -> Optional {
 
-    @warn_unused_result
-    func filter(@noescape predicate: Wrapped -> Bool) -> Optional {
-
-        return map(predicate) == .Some(true) ? self : .None
+        return map(predicate) == .some(true) ? self : .none
     }
 
-    @warn_unused_result
-    func mapNil(@noescape predicate: Void -> Wrapped) -> Optional {
-        
-        return self ?? .Some(predicate())
+    func mapNil(_ predicate: @noescape (Void) -> Wrapped) -> Optional {
+
+        return self ?? .some(predicate())
     }
     
-    @warn_unused_result
-    func flatMapNil(@noescape predicate: Void -> Optional) -> Optional {
+    func flatMapNil(_ predicate: @noescape (Void) -> Optional) -> Optional {
         
         return self ?? predicate()
     }
 
-    func then(@noescape f: Wrapped -> Void) {
+    func then(_ f: @noescape (Wrapped) -> Void) {
 
         if let wrapped = self { f(wrapped) }
     }
     
-    @warn_unused_result
-    func maybe<U>(defaultValue: U, @noescape f: Wrapped -> U) -> U {
+    
+    func maybe<U>(_ defaultValue: U, f: @noescape (Wrapped) -> U) -> U {
         
         return map(f) ?? defaultValue
     }
 
-    @warn_unused_result
-    func onSome(@noescape f: Wrapped -> Void) -> Optional {
+    func onSome(_ f: @noescape (Wrapped) -> Void) -> Optional {
 
         then(f)
         return self
     }
 
-    @warn_unused_result
-    func onNone(@noescape f: Void -> Void) -> Optional {
+    func onNone(_ f: @noescape (Void) -> Void) -> Optional {
 
         if isNone { f() }
         return self

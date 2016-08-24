@@ -67,10 +67,10 @@ class OptionalExtensionsTests: XCTestCase {
         let number: Int? = 3
         
         // when
-        let result = number.flatMapNil { .Some(2) }
+        let result = number.flatMapNil { .some(2) }
         
         // then
-        XCTAssertEqual(result, .Some(3))
+        XCTAssertEqual(result, .some(3))
     }
     
     func test_flatMapNil_whenInvokedWithNil_thenReturnsReplacedValue() {
@@ -78,10 +78,10 @@ class OptionalExtensionsTests: XCTestCase {
         let nilledNumber: Int? = nil
         
         // when
-        let result = nilledNumber.flatMapNil { .Some(2) }
+        let result = nilledNumber.flatMapNil { .some(2) }
         
         // then
-        XCTAssertEqual(result, .Some(2))
+        XCTAssertEqual(result, .some(2))
     }
 
     // MARK: - then
