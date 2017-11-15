@@ -25,7 +25,7 @@ Operators
 * [isSome](https://github.com/RuiAAPeres/OptionalExtensions#issome-bool)
 * [isNone](https://github.com/RuiAAPeres/OptionalExtensions#isnone-bool)
 
-####`filter: (Wrapped -> Bool) -> Optional<Wrapped>`
+#### `filter: (Wrapped -> Bool) -> Optional<Wrapped>`
 
 ```swift
 let number: Int? = 3
@@ -35,7 +35,7 @@ let biggerThan2 = number.filter { $0 > 2 } // .Some(3)
 let biggerThan3 = number.filter { $0 > 3 } // .None
 ```
 
-####`mapNil: (Void -> Wrapped) -> Optional<Wrapped>`
+#### `mapNil: (Void -> Wrapped) -> Optional<Wrapped>`
 
 ```swift
 let number: Int? = 3
@@ -45,7 +45,7 @@ let nilledNumber: Int? = nil
 nilledNumber.mapNil { 2 } // .Some(2)
 ```
 
-####`flatMapNil: (Void -> Optional<Wrapped>) -> Optional<Wrapped>`
+#### `flatMapNil: (Void -> Optional<Wrapped>) -> Optional<Wrapped>`
 
 ```swift
 let number: Int? = 3
@@ -55,7 +55,7 @@ let nilledNumber: Int? = nil
 nilledNumber.flatMapNil { .Some(2) } // .Some(2)
 ```
 
-####`then: (Wrapped -> Void) -> Void` (similar to `[T]`'s `forEach`)
+#### `then: (Wrapped -> Void) -> Void` (similar to `[T]`'s `forEach`)
 
 ```swift
 let number: Int? = 3
@@ -65,7 +65,7 @@ let nilledNumber: Int? = nil
 nilledNumber.then { print($0) } // print won't be called
 ```
 
-####`maybe: U -> (Wrapped -> U) -> U` (similar to Haskell's `maybe`)
+#### `maybe: U -> (Wrapped -> U) -> U` (similar to Haskell's `maybe`)
 
 ```swift
 let number: Int? = 3
@@ -75,7 +75,7 @@ let nilledNumber: Int? = nil
 nilledNumber.maybe(100) { $0 + 1 } // 100
 ```
 
-####`onSome: (Wrapped -> Void) -> Optional<Wrapped>` (injects a side effect in the `.Some` branch)
+#### `onSome: (Wrapped -> Void) -> Optional<Wrapped>` (injects a side effect in the `.Some` branch)
 
 ```swift
 let number: Int? = 3
@@ -85,7 +85,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onSome { print($0) } // .None
 ```
 
-####`onNone: (Void -> Void) -> Optional<Wrapped>` (injects a side effect in the `.None` branch)
+#### `onNone: (Void -> Void) -> Optional<Wrapped>` (injects a side effect in the `.None` branch)
 
 ```swift
 let number: Int? = 3
@@ -95,7 +95,7 @@ let nilledNumber: Int? = nil
 let sameNilledNumber = nilledNumber.onNone { print("Hello World") } // prints "Hello World" & returns .None
 ```
 
-####`isSome: Bool`
+#### `isSome: Bool`
 
 ```swift
 let number: Int? = 3
@@ -105,7 +105,7 @@ let nilledNumber: Int? = nil
 let isSome = nilledNumber.isSome // false
 ```
 
-####`isNone: Bool`
+#### `isNone: Bool`
 
 ```swift
 let number: Int? = 3
