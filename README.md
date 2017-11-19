@@ -3,7 +3,7 @@
 <a href="https://travis-ci.org/RuiAAPeres/OptionalExtensions"><img src="https://travis-ci.org/RuiAAPeres/OptionalExtensions.svg?branch=master"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 [![CocoaPods](https://img.shields.io/cocoapods/v/OptionalExtensions.svg)](https://cocoapods.org/)
-[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](https://opensource.org/licenses/MIT)
 ![](https://camo.githubusercontent.com/410f44c161ebf367eacb1fcce9121e336e211bc6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f506c6174666f726d2d696f732532302537432532306f737825323025374325323077617463686f7325323025374325323074766f732d6c69676874677265792e7376673f7374796c653d666c6174)
 
