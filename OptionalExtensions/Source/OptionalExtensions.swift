@@ -12,11 +12,11 @@ public extension Optional {
         return map(predicate) == .some(true) ? self : .none
     }
 
-    func mapNil(_ predicate: (Void) -> Wrapped) -> Optional {
+    func mapNil(_ predicate: () -> Wrapped) -> Optional {
         return self ?? .some(predicate())
     }
 
-    func flatMapNil(_ predicate: (Void) -> Optional) -> Optional {
+    func flatMapNil(_ predicate: () -> Optional) -> Optional {
         return self ?? predicate()
     }
 
@@ -33,7 +33,7 @@ public extension Optional {
         return self
     }
 
-    func onNone(_ f: (Void) -> Void) -> Optional {
+    func onNone(_ f: () -> Void) -> Optional {
         if isNone { f() }
         return self
     }
